@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Static Page Builder</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../editor.css">
+    </head>
+    <body>
+        <textarea cols="30" rows="10"></textarea>
+        <br>
+        <button class="save button-primary">Save</button>
+    </body>
+    <script type="text/javascript" src="../editor.js"></script>
+    <script type="text/javascript" src="../icon-sets/base-icons.js"> </script>
+    <script type="text/javascript">
+        var editor = new Editor("textarea");
+        addIcons(editor);
+
+        document.querySelector(".save").addEventListener("click", function () {
+            alert(editor.getValue());
+        });
+
+    </script>
+</html>
